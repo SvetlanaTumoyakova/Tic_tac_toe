@@ -5,15 +5,67 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/lavender"
     tools:context=".MainActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:background="@drawable/white_box"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
+        <TextView
+            android:id="@+id/enterPlayerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_player_name"
+            android:layout_marginBottom="10dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:textAllCaps="true"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/playerOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textStyle="italic"
+            android:textColor="@color/blue"
+            android:background="@drawable/black_border"
+            android:padding="12dp"
+            android:layout_marginVertical="10dp"
+            android:drawableStart="@drawable/ic_xicon"
+            android:hint="@string/player_name_1" />
+
+        <EditText
+            android:id="@+id/playerTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textStyle="italic"
+            android:textColor="@color/blue"
+            android:background="@drawable/black_border"
+            android:padding="12dp"
+            android:layout_marginVertical="10dp"
+            android:drawableStart="@drawable/ic_oicon"
+            android:hint="@string/player_name_2" />
+
+        <Button
+            android:id="@+id/startGameButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cornerRadius="20dp"
+            android:textSize="18sp"
+            android:text="@string/start_game" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
